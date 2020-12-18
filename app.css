@@ -133,7 +133,7 @@ a {
 }
 
 .logo>span>span {
-	color: red;
+	color: yellow;
 }
 
 .logo--mini {
@@ -143,7 +143,7 @@ a {
 
 /* 로고바 시작 */
 .logo-bar {
-	background-color: black;
+	background-color: #1565C0;
 	color: white;
 	height: 150px;
 }
@@ -151,7 +151,7 @@ a {
 
 /* 메뉴바 시작 */
 .menu-bar {
-	background-color: black;
+	background-color: #1565C0;
 	color: white;
 }
 
@@ -167,7 +167,7 @@ a {
 
 .menu-bar__menu-1 ul>li:hover>a {
 	background-color: white;
-	color: black;
+	color: deepskyblue;
 }
 
 .menu-bar__menu-1>ul>li>a {
@@ -180,8 +180,8 @@ a {
 	top: 100%;
 	left: -10px;
 	width: 100%;
-	background-color: black;
-	border: 10px solid black;
+	background-color: #1565C0;
+	border: 10px solid rgba(255, 255, 255,0.3);
 	border-top-width: 0;
 	border-radius: 0 0 20px 20px;
 	z-index: 10;
@@ -206,7 +206,7 @@ a {
 /* 하단바 시작 */
 .bottom-bar {
 	margin-top: 30px;
-	background-color: black;
+	background-color: #1565C0;
 	color: white;
 	padding-top: 30px;
 	padding-bottom: 30px;
