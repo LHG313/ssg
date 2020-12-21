@@ -1,6 +1,6 @@
 /*
-SQLyog Community v13.1.5  (64 bit)
-MySQL - 10.4.17-MariaDB : Database - textboard
+SQLyog Community v13.1.7 (64 bit)
+MySQL - 10.4.14-MariaDB : Database - textBoard
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 10.4.17-MariaDB : Database - textboard
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`textboard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`textBoard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `textboard`;
+USE `textBoard`;
 
 /*Table structure for table `article` */
 
@@ -29,13 +29,16 @@ CREATE TABLE `article` (
   `memberId` int(10) unsigned NOT NULL,
   `boardId` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `article` */
 
 insert  into `article`(`id`,`regDate`,`updateDate`,`title`,`body`,`memberId`,`boardId`) values 
 (1,'2020-12-17 20:55:32','2020-12-17 20:55:32','java 문자열에서 부분 추출하기','# 자바 문자열 분리해서 추출하기\r\n```java\r\n    // charAt(문장 중에 인덱스 위치에 해당문자 추출)\r\n    \r\n    //인덱스 범위 0~6\r\n    String aaa = \\\"가나다라마바사\\\";\r\n    \r\n    // 인덱스3을 출력하면 \\\"라\\\"가 출력됩니다.\r\n    char data = aaa.charAt(3);    \r\n\r\n    System.out.println(data);\r\n    //출력값 : 라\r\n\r\n    //subString (원하는 범위만큼 문자열 추출)\r\n\r\n    // 인덱스 범위 0~6\r\n    String aaa = \"가나다라마바사\";\r\n    \r\n    //2~5에 해당되는 문자열 부분 추출   \r\n    String data = aaa.substring(2,5);    \r\n    \r\n    System.out.println(data);\r\n    //출력값: 다라마\r\n\r\n    //split(주어진 문자로 분리하여 배열에 저장)\r\n\r\n    // 띄어쓰기를 포함한 문장\r\n    String aaa = \"가나 다라마 바 사\";\r\n\r\n    //split으로 띄어쓰기를 구분하여 배열에 저장\r\n    String[] data = aaa.split(\" \");\r\n\r\n    //구분된 배열을 배열의 길이만큼 출력\r\n    for (int i = 0; i < data.length; i++) {\r\n    System.out.println(data[i]);\r\n    }\r\n    \r\n    //출력값: 가나\r\n             다라 \r\n             바\r\n             사   \r\n    \r\n\r\n\r\n    //split 2탄\r\n\r\n        //구분은 &와 ,(쉼표)와 -로 구분\r\n        String aaa = \"안녕&하세요,반갑-습니다\";\r\n		\r\n        \r\n        // &와 ,(쉼표)와 -로 구분해보면\r\n        String[] data = aaa.split(\"&|,|-\");\r\n\r\n		for (int i = 0; i < data.length; i++) {\r\n			System.out.println(data[i]);\r\n		}\r\n\r\n        //출력값: 안녕\r\n                 하세요\r\n                 반갑\r\n                 습니다\r\n\r\n\r\n```\r\n ',1,3),
-(2,'2020-12-17 20:55:14','2020-12-17 20:55:14','java 문자열에서 숫자만 추출','# java 문자열에서 숫자만 추출\r\n\r\n```java\r\n\r\n//정규표현식으로 Integer 추출\r\n\r\n\r\n    String str = \"aaa1234, ^&*2233pp\";\r\n\r\n    //replaceAll()에 인자로 정규표현식과 변환할 문자열을 전달\r\n    String intStr = str.replaceAll(\"[^0-9]\", \"\");\r\n    //\"[^0-9]\"는 0~9의 숫자가 아닌 문자열을 의미 (숫자가 아닌 문자들을 공백(\"\"))\r\n\r\n    System.out.println(intStr);\r\n    \r\n    // 출력값: 12342233\r\n\r\n\r\n    //replaceAll2탄\r\n\r\n    String str = \"aaa1234, ^&*2233pp\";\r\n\r\n    //\"^\\\\d\"는 \"[^0-9]\"의 축약형으로 의미가 동일(\"[^0-9]\" 대신 \"^\\\\d\"사용)\r\n    String intStr = str.replaceAll(\"[^\\\\d]\", \"\");\r\n    \r\n    System.out.println(intStr);\r\n    \r\n    // 출력값: 12342233\r\n    \r\n\r\n    //for문으로 숫자 추출\r\n\r\n    String str = \"aaa1234, ^&*2233pp\";\r\n    \r\n    String intStr = \"\";\r\n    \r\n    for (int i = 0; i < str.length(); i++) {\r\n        char ch = str.charAt(i);\r\n\r\n    //  48은 ASCII에서 숫자 0을 의미하고, 57은 ASCII에서 숫자 9를 의미(0~9까지 숫자만 추출)\r\n    if (48 <= ch && ch <= 57) {\r\n        intStr += ch;\r\n    }\r\n    }\r\n    System.out.println(intStr); \r\n\r\n    // 출력값: 12342233\r\n\r\n\r\n```',1,3);
+(2,'2020-12-17 20:55:14','2020-12-17 20:55:14','java 문자열에서 숫자만 추출','# java 문자열에서 숫자만 추출\r\n\r\n```java\r\n\r\n    //정규표현식으로 Integer 추출\r\n\r\n\r\n    String str = \"aaa1234, ^&*2233pp\";\r\n\r\n    //replaceAll()에 인자로 정규표현식과 변환할 문자열을 전달\r\n    String intStr = str.replaceAll(\"[^0-9]\", \"\");\r\n    //\"[^0-9]\"는 0~9의 숫자가 아닌 문자열을 의미 (숫자가 아닌 문자들을 공백(\"\"))\r\n\r\n    System.out.println(intStr);\r\n    \r\n    // 출력값: 12342233\r\n\r\n\r\n    //replaceAll2탄\r\n\r\n    String str = \"aaa1234, ^&*2233pp\";\r\n\r\n    //\"^\\\\d\"는 \"[^0-9]\"의 축약형으로 의미가 동일(\"[^0-9]\" 대신 \"^\\\\d\"사용)\r\n    String intStr = str.replaceAll(\"[^\\\\d]\", \"\");\r\n    \r\n    System.out.println(intStr);\r\n    \r\n    // 출력값: 12342233\r\n    \r\n\r\n    //for문으로 숫자 추출\r\n\r\n    String str = \"aaa1234, ^&*2233pp\";\r\n    \r\n    String intStr = \"\";\r\n    \r\n    for (int i = 0; i < str.length(); i++) {\r\n        char ch = str.charAt(i);\r\n\r\n    //  48은 ASCII에서 숫자 0을 의미하고, 57은 ASCII에서 숫자 9를 의미(0~9까지 숫자만 추출)\r\n    if (48 <= ch && ch <= 57) {\r\n        intStr += ch;\r\n    }\r\n    }\r\n    System.out.println(intStr); \r\n\r\n    // 출력값: 12342233\r\n\r\n\r\n```',1,3),
+(3,'2020-12-21 09:10:55','2020-12-21 09:10:55','java String값 한글자씩 배열에 저장하기','# java String값 한글자씩 배열에 저장하기\r\n\r\n```java\r\n        \r\n            //Split함수를 활용하여 단어를 String 배열에 한글자씩 저장하기\r\n        \r\n            //스트링 문자:word\r\n   		String 단어 = \"word\";\r\n    \r\n            // String을 담을 배열\r\n		String[] 단어들;\r\n\r\n            //배열에 한글자씩 저장\r\n		단어들 = 단어.split(\"\");\r\n    \r\n		for (int i = 0; i < 단어들.length; i++) {\r\n			System.out.println(단어들[i]);\r\n		}\r\n\r\n        }\r\n        \r\n        출력값: w\r\n               o \r\n               r\r\n               d\r\n \r\n```',1,3),
+(4,'2020-12-21 09:11:14','2020-12-21 09:12:01','java ArrayList 사용하기','# java ArrayList란\r\n\r\n```java\r\n            //ArrayList를 사용하는데 필수로 넣어야 합니다.\r\n            import java.util.ArrayList;\r\n    \r\n        	// 저장할 타입이 있으면 넣어야 합니다.\r\n		// (ex.ArrayList<String>군것질 = new ArrayList<String>():<>꺽쇠 안에 넣어주기)\r\n		ArrayList 군것질 = new ArrayList<>();\r\n\r\n		// 객체를 담을 메소드 add()\r\n		군것질.add(\"과자\");\r\n		군것질.add(\"초콜릿\");\r\n		군것질.add(\"사탕\");\r\n		군것질.add(\"음료수\");\r\n		군것질.add(\"고구마\");\r\n\r\n		// size를 사용해서 ArrayList의 크기를 정수로 반환\r\n		for (int i = 0; i < 군것질.size(); i++) {\r\n			// get()를 사용해서 ArrayList에 저장된 위치 반환\r\n			// ex. 군것질.get(0)--> 과자가 출력\r\n			System.out.println(군것질.get(i));\r\n		}\r\n\r\n	}\r\n\r\n\r\n        출력값 : 과자\r\n                초콜릿\r\n                사탕\r\n                음료수\r\n                고구마\r\n\r\n\r\n \r\n```',1,3),
+(5,'2020-12-21 09:11:59','2020-12-21 09:28:20','java 공백제거','# java ArrayList란\r\n\r\n```java\r\n\r\n	//공백제거 전		\r\n		String a = \" 공백을 제거합시다. \";\r\n		System.out.println(a);\r\n		\r\n		a = a.trim();\r\n		// trim() 사용 후\r\n		System.out.println(a);\r\n\r\n                    \r\n        출력 값 :  공백을 제거합시다. //<= 사용 전 \r\n                 공백을 제거합시다. // <= 사용 후\r\n\r\n```',1,3);
 
 /*Table structure for table `board` */
 
