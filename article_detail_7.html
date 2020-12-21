@@ -116,29 +116,84 @@
 <section class="section-1 con-min-width">
 	<div class="con">
 		<div class="article-detail">
-			<h2 class="article-detail__title">java 공백제거</h2>
+			<h2 class="article-detail__title">java 문자열 치환</h2>
 
 			<div class="article-detail__sub-info flex">
 				<div class="article-detail__board-name">JAVA</div>
-				<div class="article-detail__reg-date">2020-12-21 09:11:59</div>
+				<div class="article-detail__reg-date">2020-12-21 11:25:45</div>
 				<div class="article-detail__writer">이회구</div>
 			</div>
 
-			<div class="article-detail__body main-font"># java 공백제거
+			<div class="article-detail__body main-font"># java 문자열 치환
 
 ```java
+        
+           //replace([기존문자],[바꿀문자])
+		String a ="문자를 어떻게 바꾼다고";
 
-	//공백제거 전		
-		String a = " 공백을 제거합시다. ";
-		System.out.println(a);
+		a = a.replace("어떻게", "이렇게");
 		
-		a = a.trim();
-		// trim() 사용 후
-		System.out.println(a);
+		 System.out.println(a);
 
-                    
-        출력 값 :  공백을 제거합시다. //<= 사용 전 
-                 공백을 제거합시다. // <= 사용 후
+         // 출력값: 문자를 이렇게 바꾼다고
+
+
+        //replaceAll([정규식],[바꿀문자])
+		String a ="문자를 어떻게 바꾼다고";
+
+		a = a.replace("어떻게", "이렇게");
+		
+		 System.out.println(a);
+
+         // 출력값: 문자를 이렇게 바꾼다고
+
+            
+        //이렇게 보면 replace와 replaceAll이 똑같아 보입니다. 
+        // 하지만 둘은 차이점이 있습니다.
+
+        //replace 사용
+		String a ="가.나.다.라.마.바.사";
+
+		a = a.replace(".", "/");
+		
+		 System.out.println(a);
+
+        // replace는 인자값만을 변환해줍니다.
+        출력값 : 가/나/다/라/마/바/사
+
+        
+    
+        	//replaceAll 사용
+		String a ="가.나.다.라.마.바.사";
+
+		a = a.replaceAll(".", "/");
+		
+		 System.out.println(a);
+        
+        // replaceAll은 정규식이기 때문에 .(마침표)가 모든 문자를 의미하기에 둘은 다릅니다.
+        출력값://///////////
+        
+        
+        // replaceFirst와 replace,replaceAll의 차이점
+        
+        //replaceFirst 사용(첫번째 값만 바뀝니다.
+		String a ="문자는 문자가 있어야지만 바뀌지";
+
+		a = a.replaceFirst("문자", "단어");
+		
+		 System.out.println(a);
+    
+         출력값: 단어는 문자가 있어야지만 바뀌지
+
+        //replace replaceAll사용
+		String a ="문자는 문자가 있어야지만 바뀌지";
+
+		a = a.replace("문자", "단어");
+		
+		 System.out.println(a);
+    
+         출력값: 단어는 단어가 있어야지만 바뀌지
+
 
 ```</div>
 
@@ -161,14 +216,14 @@
 			</div>
 
 			<div class="article-detail__menu flex">
-				<a title="java ArrayList 사용하기"
-					href="article_detail_4.html"
+				<a title="java 문자열 붙이기"
+					href="article_detail_6.html"
 					class="hover-underline ">&lt;
 					이전글</a> <a href="article_list_java_1.html"
 					class="hover-underline ">목록</a>
-				<a title="java 문자열 붙이기"
-					href="article_detail_6.html"
-					class="hover-underline ">다음글
+				<a title=""
+					href="article_detail_0.html"
+					class="hover-underline none">다음글
 					&gt;</a>
 			</div>
 		</div>

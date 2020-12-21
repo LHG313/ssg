@@ -116,29 +116,38 @@
 <section class="section-1 con-min-width">
 	<div class="con">
 		<div class="article-detail">
-			<h2 class="article-detail__title">java 공백제거</h2>
+			<h2 class="article-detail__title">java 문자열 붙이기</h2>
 
 			<div class="article-detail__sub-info flex">
 				<div class="article-detail__board-name">JAVA</div>
-				<div class="article-detail__reg-date">2020-12-21 09:11:59</div>
+				<div class="article-detail__reg-date">2020-12-21 11:13:07</div>
 				<div class="article-detail__writer">이회구</div>
 			</div>
 
-			<div class="article-detail__body main-font"># java 공백제거
+			<div class="article-detail__body main-font"># java 문자열 붙이기
 
 ```java
+        
+        // concat을 사용해서 문자열 붙이기
+        String a = "안녕";
+		String b = "하세요.";
+    
+        // a+b =안녕 + 하세요.
+		System.out.println(a.concat(b));
+        
+        출력값: 안녕하세요.
 
-	//공백제거 전		
-		String a = " 공백을 제거합시다. ";
-		System.out.println(a);
+
+        //문자열이 2개 이상일 때는 Concat보다 Append를 사용하기
+		StringBuilder sb = new StringBuilder("안녕");
 		
-		a = a.trim();
-		// trim() 사용 후
-		System.out.println(a);
+		sb.append("하세요.");
+		sb.append("저는 홍길동입니다.");
 
-                    
-        출력 값 :  공백을 제거합시다. //<= 사용 전 
-                 공백을 제거합시다. // <= 사용 후
+		System.out.println(sb);
+    
+        출력값: 안녕하세요. 저는 홍길동입니다.
+
 
 ```</div>
 
@@ -161,13 +170,13 @@
 			</div>
 
 			<div class="article-detail__menu flex">
-				<a title="java ArrayList 사용하기"
-					href="article_detail_4.html"
+				<a title="java 공백제거"
+					href="article_detail_5.html"
 					class="hover-underline ">&lt;
 					이전글</a> <a href="article_list_java_1.html"
 					class="hover-underline ">목록</a>
-				<a title="java 문자열 붙이기"
-					href="article_detail_6.html"
+				<a title="java 문자열 치환"
+					href="article_detail_7.html"
 					class="hover-underline ">다음글
 					&gt;</a>
 			</div>
