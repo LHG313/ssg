@@ -325,3 +325,44 @@ a {
 }
 
 /* 게시물 상세 끝 */
+
+/* 홈 시작 */
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+section{
+  display:block;
+}
+
+.section-home{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px;
+}
+.section-home > div{
+  position:relative;
+}
+.section-home > div > * {
+  position:absolute;
+}
+
+.img1 { 
+  height: 300px;
+  animation: fadein 2s;
+   width:50%;
+  left:50%;
+  
+}
+.section-home >.text{
+     position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+  margin-right:20px
+}
