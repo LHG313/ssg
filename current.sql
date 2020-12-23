@@ -29,7 +29,7 @@ CREATE TABLE `article` (
   `memberId` int(10) unsigned NOT NULL,
   `boardId` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `article` */
 
@@ -40,7 +40,9 @@ insert  into `article`(`id`,`regDate`,`updateDate`,`title`,`body`,`memberId`,`bo
 (4,'2020-12-21 09:11:14','2020-12-21 09:12:01','java ArrayList 사용하기','# java ArrayList란\r\n\r\n```java\r\n            //ArrayList를 사용하는데 필수로 넣어야 합니다.\r\n            import java.util.ArrayList;\r\n    \r\n        	// 저장할 타입이 있으면 넣어야 합니다.\r\n		// (ex.ArrayList<String>군것질 = new ArrayList<String>():<>꺽쇠 안에 넣어주기)\r\n		ArrayList 군것질 = new ArrayList<>();\r\n\r\n		// 객체를 담을 메소드 add()\r\n		군것질.add(\"과자\");\r\n		군것질.add(\"초콜릿\");\r\n		군것질.add(\"사탕\");\r\n		군것질.add(\"음료수\");\r\n		군것질.add(\"고구마\");\r\n\r\n		// size를 사용해서 ArrayList의 크기를 정수로 반환\r\n		for (int i = 0; i < 군것질.size(); i++) {\r\n			// get()를 사용해서 ArrayList에 저장된 위치 반환\r\n			// ex. 군것질.get(0)--> 과자가 출력\r\n			System.out.println(군것질.get(i));\r\n		}\r\n\r\n	}\r\n\r\n\r\n        출력값 : 과자\r\n                초콜릿\r\n                사탕\r\n                음료수\r\n                고구마\r\n\r\n\r\n \r\n```',1,3),
 (5,'2020-12-21 09:11:59','2020-12-21 09:28:20','java 공백제거','# java 공백제거\r\n\r\n```java\r\n\r\n	//공백제거 전		\r\n		String a = \" 공백을 제거합시다. \";\r\n		System.out.println(a);\r\n		\r\n		a = a.trim();\r\n		// trim() 사용 후\r\n		System.out.println(a);\r\n\r\n                    \r\n        출력 값 :  공백을 제거합시다. //<= 사용 전 \r\n                 공백을 제거합시다. // <= 사용 후\r\n\r\n```',1,3),
 (6,'2020-12-21 11:13:07','2020-12-21 11:13:07','java 문자열 붙이기','# java 문자열 붙이기\r\n\r\n```java\r\n        \r\n        // concat을 사용해서 문자열 붙이기\r\n        String a = \"안녕\";\r\n		String b = \"하세요.\";\r\n    \r\n        // a+b =안녕 + 하세요.\r\n		System.out.println(a.concat(b));\r\n        \r\n        출력값: 안녕하세요.\r\n\r\n\r\n        //문자열이 2개 이상일 때는 Concat보다 Append를 사용하기\r\n		StringBuilder sb = new StringBuilder(\"안녕\");\r\n		\r\n		sb.append(\"하세요.\");\r\n		sb.append(\"저는 홍길동입니다.\");\r\n\r\n		System.out.println(sb);\r\n    \r\n        출력값: 안녕하세요. 저는 홍길동입니다.\r\n\r\n\r\n```',1,3),
-(7,'2020-12-21 11:25:45','2020-12-21 11:25:45','java 문자열 치환','# java 문자열 치환\r\n\r\n```java\r\n        \r\n           //replace([기존문자],[바꿀문자])\r\n		String a =\"문자를 어떻게 바꾼다고\";\r\n\r\n		a = a.replace(\"어떻게\", \"이렇게\");\r\n		\r\n		 System.out.println(a);\r\n\r\n         // 출력값: 문자를 이렇게 바꾼다고\r\n\r\n\r\n        //replaceAll([정규식],[바꿀문자])\r\n		String a =\"문자를 어떻게 바꾼다고\";\r\n\r\n		a = a.replace(\"어떻게\", \"이렇게\");\r\n		\r\n		 System.out.println(a);\r\n\r\n         // 출력값: 문자를 이렇게 바꾼다고\r\n\r\n            \r\n        //이렇게 보면 replace와 replaceAll이 똑같아 보입니다. \r\n        // 하지만 둘은 차이점이 있습니다.\r\n\r\n        //replace 사용\r\n		String a =\"가.나.다.라.마.바.사\";\r\n\r\n		a = a.replace(\".\", \"/\");\r\n		\r\n		 System.out.println(a);\r\n\r\n        // replace는 인자값만을 변환해줍니다.\r\n        출력값 : 가/나/다/라/마/바/사\r\n\r\n        \r\n    \r\n        	//replaceAll 사용\r\n		String a =\"가.나.다.라.마.바.사\";\r\n\r\n		a = a.replaceAll(\".\", \"/\");\r\n		\r\n		 System.out.println(a);\r\n        \r\n        // replaceAll은 정규식이기 때문에 .(마침표)가 모든 문자를 의미하기에 둘은 다릅니다.\r\n        출력값://///////////\r\n        \r\n        \r\n        // replaceFirst와 replace,replaceAll의 차이점\r\n        \r\n        //replaceFirst 사용(첫번째 값만 바뀝니다.\r\n		String a =\"문자는 문자가 있어야지만 바뀌지\";\r\n\r\n		a = a.replaceFirst(\"문자\", \"단어\");\r\n		\r\n		 System.out.println(a);\r\n    \r\n         출력값: 단어는 문자가 있어야지만 바뀌지\r\n\r\n        //replace replaceAll사용\r\n		String a =\"문자는 문자가 있어야지만 바뀌지\";\r\n\r\n		a = a.replace(\"문자\", \"단어\");\r\n		\r\n		 System.out.println(a);\r\n    \r\n         출력값: 단어는 단어가 있어야지만 바뀌지\r\n\r\n\r\n```',1,3);
+(7,'2020-12-21 11:25:45','2020-12-21 11:25:45','java 문자열 치환','# java 문자열 치환\r\n\r\n```java\r\n        \r\n           //replace([기존문자],[바꿀문자])\r\n		String a =\"문자를 어떻게 바꾼다고\";\r\n\r\n		a = a.replace(\"어떻게\", \"이렇게\");\r\n		\r\n		 System.out.println(a);\r\n\r\n         // 출력값: 문자를 이렇게 바꾼다고\r\n\r\n\r\n        //replaceAll([정규식],[바꿀문자])\r\n		String a =\"문자를 어떻게 바꾼다고\";\r\n\r\n		a = a.replace(\"어떻게\", \"이렇게\");\r\n		\r\n		 System.out.println(a);\r\n\r\n         // 출력값: 문자를 이렇게 바꾼다고\r\n\r\n            \r\n        //이렇게 보면 replace와 replaceAll이 똑같아 보입니다. \r\n        // 하지만 둘은 차이점이 있습니다.\r\n\r\n        //replace 사용\r\n		String a =\"가.나.다.라.마.바.사\";\r\n\r\n		a = a.replace(\".\", \"/\");\r\n		\r\n		 System.out.println(a);\r\n\r\n        // replace는 인자값만을 변환해줍니다.\r\n        출력값 : 가/나/다/라/마/바/사\r\n\r\n        \r\n    \r\n        	//replaceAll 사용\r\n		String a =\"가.나.다.라.마.바.사\";\r\n\r\n		a = a.replaceAll(\".\", \"/\");\r\n		\r\n		 System.out.println(a);\r\n        \r\n        // replaceAll은 정규식이기 때문에 .(마침표)가 모든 문자를 의미하기에 둘은 다릅니다.\r\n        출력값://///////////\r\n        \r\n        \r\n        // replaceFirst와 replace,replaceAll의 차이점\r\n        \r\n        //replaceFirst 사용(첫번째 값만 바뀝니다.\r\n		String a =\"문자는 문자가 있어야지만 바뀌지\";\r\n\r\n		a = a.replaceFirst(\"문자\", \"단어\");\r\n		\r\n		 System.out.println(a);\r\n    \r\n         출력값: 단어는 문자가 있어야지만 바뀌지\r\n\r\n        //replace replaceAll사용\r\n		String a =\"문자는 문자가 있어야지만 바뀌지\";\r\n\r\n		a = a.replace(\"문자\", \"단어\");\r\n		\r\n		 System.out.println(a);\r\n    \r\n         출력값: 단어는 단어가 있어야지만 바뀌지\r\n\r\n\r\n```',1,3),
+(8,'2020-12-23 10:10:38','2020-12-23 10:10:38','자유게시판입니다~','# 이곳은 자유게시판입니다~\r\n모두 편하게 하고 싶으신 말씀을 적어주시길 바랍니다~\r\n단! 서로의 입장을 생각해주시고 적어주시면 감사하겠습니다~',1,2),
+(9,'2020-12-23 10:11:42','2020-12-23 10:11:42','공지사항 안내','# 이곳은 공지사항입니다~\r\n공지사항이 있을 시 참고해주시면 감사하겠습니다~',1,1);
 
 /*Table structure for table `board` */
 
@@ -58,8 +60,9 @@ CREATE TABLE `board` (
 /*Data for the table `board` */
 
 insert  into `board`(`id`,`regDate`,`updateDate`,`name`,`code`) values 
-(3,'2020-12-17 20:03:15','2020-12-17 20:03:15','JAVA','java'),
-(4,'2020-12-17 20:04:19','2020-12-17 20:04:19','JAVA','java');
+(1,'2020-12-23 10:07:23','2020-12-23 10:07:23','공지사항','notice'),
+(2,'2020-12-23 10:07:44','2020-12-23 10:07:44','자유게시판','free'),
+(3,'2020-12-17 20:03:15','2020-12-17 20:03:15','JAVA','java');
 
 /*Table structure for table `member` */
 
@@ -78,7 +81,7 @@ CREATE TABLE `member` (
 /*Data for the table `member` */
 
 insert  into `member`(`id`,`regDate`,`updateDate`,`loginId`,`loginPw`,`name`) values 
-(1,'2020-12-17 20:04:19','2020-12-17 20:04:19','master','master','이회구');
+(1,'2020-12-17 20:04:19','2020-12-17 20:04:19','admin','admin','이회구');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
