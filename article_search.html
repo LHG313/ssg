@@ -22,45 +22,39 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://blog.imaginaryspace.kr/" />
-<meta name="subject" content="공지사항 안내😓"/>
+<meta name="subject" content="비전공자의 공부/일상 블로그" />
 <meta name="title" content="Imaginary" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="Imaginary" />
-<meta name="pubdate" content="2021-01-04T22:05:15" />
-<meta name="lastmod" content="2021-01-04T22:05:15" />
+<meta name="pubdate" content="2021-01-06T23:35:22" />
+<meta name="lastmod" content="2021-01-06T23:35:22" />
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="Imaginary" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="공지사항 안내😓" />
-<meta property="og:description" content=" 이곳은 공지사항입니다
-  주로 자바공부에 대한 자료를 주로 올릴 예정이며 일주일에 최소 하나씩 공부자료를 올리도록 하겠습니다
-  잘 부탁드립니다" />
+<meta property="og:title" content="비전공자의 공부/일상 블로그" />
+<meta property="og:description" content="비전공자의 공부/일상 관련 글들을 공유합니다." />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
 <meta property="og:image:alt" content="blog.imaginaryspace.kr/" />
 <meta property="og:image:width" content="486" />
 <meta property="og:image:height" content="254" />
-<meta property="og:updated_time" content="2021-01-04T22:05:15"/>
-<meta property="og:pubdate" content="2021-01-04T22:05:15" />
+<meta property="og:updated_time" content="2021-01-06T23:35:22" />
+<meta property="og:pubdate" content="2021-01-06T23:35:22" />
 <meta property="og:url" content="https://blog.imaginaryspace.kr/" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="공지사항 안내😓" />
+<meta name="twitter:title" content="비전공자의 공부/일상 블로그" />
 <meta name="twitter:site" content="@Imaginary" />
 <meta name="twitter:creator" content="@Imaginary" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" 이곳은 공지사항입니다
-  주로 자바공부에 대한 자료를 주로 올릴 예정이며 일주일에 최소 하나씩 공부자료를 올리도록 하겠습니다
-  잘 부탁드립니다" />
+<meta name="twitter:description" content="비전공자의 공부/일상 관련 글들을 공유합니다." />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="Imaginary" />
 <meta itemprop="name" content="Imaginary" />
-<meta itemprop="description" content=" 이곳은 공지사항입니다
-  주로 자바공부에 대한 자료를 주로 올릴 예정이며 일주일에 최소 하나씩 공부자료를 올리도록 하겠습니다
-  잘 부탁드립니다" />
+<meta itemprop="description" content="비전공자의 공부/일상 관련 글들을 공유합니다." />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
-<title>공지사항 안내😓 | Imaginary | ARTICLE DETAIL</title>
+<title>Imaginary | ARTICLE SEARCH</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -99,6 +93,9 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+<!-- 제이쿼리 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="body-content min-height-100vh flex flex-column">
@@ -120,6 +117,9 @@
 					<ul class="flex">
 						<li><a href="./" class="block"> <i class="fas fa-home"></i>
 								<span>HOME</span>
+						</a></li>
+						<li><a href="./article_search.html" class="block"> <i
+								class="fas fa-search"></i> <span>검색</span>
 						</a></li>
 						<li><a class="block"> <i class="fas fa-list"></i> <span>ARTICLES</span>
 						</a>
@@ -152,99 +152,47 @@
 
 		<main class="flex-grow-1">
 			<section class="title-bar con-min-width">
-				<h1 class="con"><i class="fas fa-file-alt"></i> <span>ARTICLE DETAIL</span></h1>
-			</section><!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+				<h1 class="con"><i class="fas fa-search"></i> <span>ARTICLE SEARCH</span></h1>
+			</section><!-- lodash 불러오기 -->
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
 
-<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-<script
-	src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
-<!-- 토스트 UI 에디터, CSS 코어 -->
-<link rel="stylesheet"
-	href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-
-<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
-<script
-	src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
-
-<section class="section-1 con-min-width">
+<section id="article-list-wrap" class="section-1 con-min-width">
 	<div class="con">
-		<div class="article-detail">
-			<h2 class="article-detail__title">공지사항 안내😓</h2>
-
-			<div class="article-detail__sub-info flex">
-				<div class="article-detail__board-name">공지사항</div>
-				<div class="article-detail__reg-date">2021-01-04 22:01:34</div>
-				<div class="article-detail__writer">이회구</div>
-				<div class="article-detail__hit-count">조회수 : 0</div>
-				<div class="article-detail__likes-count">추천수 :
-					0</div>
-				<div class="article-detail__comments-count">댓글수 :
-					0</div>
-			</div>
-
-			<div class="article-detail__body main-font"># 이곳은 공지사항입니다~
-  주로 자바공부에 대한 자료를 주로 올릴 예정이며, 일주일에 최소 하나씩 공부자료를 올리도록 하겠습니다~
-  잘 부탁드립니다~😄</div>
-
-			<div class="article-detail__reply-box">
-				<div id="disqus_thread"></div>
-				<script>
-					var disqus_config = function() {
-						this.page.url = 'https://blog.imaginaryspace.kr/article_detail_11.html';
-						this.page.identifier = 'article_detail_11.html';
-					};
-
-					(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = 'https://my-smg.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>
-					Please enable JavaScript to view the <a
-						href="https://disqus.com/?ref_noscript">comments powered by
-						Disqus.</a>
-				</noscript>
-
-			</div>
-
-			<div class="article-detail__menu flex">
-				<a title="공지사항 안내😓"
-					href="article_detail_9.html"
-					class="hover-underline ">&lt;
-					이전글</a> <a href="article_list_notice_1.html"
-					class="hover-underline ">목록</a>
-				<a title=""
-					href="article_detail_0.html"
-					class="hover-underline none">다음글
-					&gt;</a>
+		<div class="article-search">
+			<form class="block">
+				<input @input="searchKeywordInputed" type="text" placeholder="검색어"
+					:value="searchKeyword">
+			</form>
+		</div>
+		<div class="article-list">
+			<header>
+				<div>
+					<div class="article-list__cell-id">번호</div>
+					<div class="article-list__cell-reg-date">날짜</div>
+					<div class="article-list__cell-writer">작성자</div>
+					<div class="article-list__cell-title">제목</div>
+				</div>
+			</header>
+			<div class="main">
+				<div v-for="article in filtered">
+					<div class="article-list__cell-id">{{article.id}}</div>
+					<div class="article-list__cell-reg-date">{{article.regDate}}</div>
+					<div class="article-list__cell-writer">{{article.writer}}</div>
+					<div class="article-list__cell-title">
+						<a :href="'article_detail_' + article.id + '.html'" target="_blank"
+							class="hover-underline">{{article.title}}</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- 위로 가는 버튼 -->
-<div id="top">
-	<a href="#"><i class="fa fa-arrow-up"></i></a>
-</div>
-<script>
-	$('#top').click(function() {
-		$('html, body').animate({
-			scrollTop : 0
-		}, 'slow');
-	});
-</script>
-<!-- // 위로 가는 버튼 -->
-</main>
+<script src="article_search.js"></script></main>
 
 <footer class="bottom-bar con-min-width">
 	<div class="con flex flex-ai-c">
