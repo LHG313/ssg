@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=G-4NNXVD04DN"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-4NNXVD04DN');
+</script>
+<meta charset="UTF-8" />
+
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=1200">
+<meta name="apple-mobile-web-app-title" content="Imaginary" />
+<!-- 메타태그정보 //-->
+<!-- META -->
+<link rel="canonical" href="https://blog.imaginaryspace.kr/" />
+<meta name="subject" content="java 문자열 함수들😄" />
+<meta name="title" content="Imaginary" />
+<meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
+<meta name="copyright" content="Imaginary" />
+<meta name="pubdate" content="2021-01-06T23:52:23" />
+<meta name="lastmod" content="2021-01-06T23:52:23" />
+<!-- OPENGRAPH -->
+<meta property="og:site_name" content="Imaginary" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="java 문자열 함수들😄" />
+<meta property="og:description" content=" java 문자열 함수들
+
+java
+        
+  startWith 문자열이 지정한 문자로 시작하는지 판단 같으면 true 아니면 false를 반환 대소문자 구별
+
+ 
+
+  endWith 문자열 마지막에 지정한 문자가 있는지를 판단후 있으면 true 없으면 false를 반환대소문자 구별
+
+ 
+
+  equlas  두 개의 String에 값만을 비교해서 같으면 true 다르면 false대소문자 구별
+
+ 
+
+  indexOf 지정한 문자가 문자열에 몇번째에 있는지를 반환한다 int
+
+ 
+
+   lastindexOf 문자열에 지정한 문자가 마지막 몇 번째에 있는지를 반환한다 int
+
+ 
+
+  length 문자열의 길이를 반환
+
+ 
+
+  replace 문자열에 지정한 문자가 있으면 새로 지정한 문자로 바꿔서 출력
+
+ 
+
+  replaceAll 정규표현식을 지정한 문자로 바꿔서 출력한다
+
+ 
+
+  split  지정한 문자로 문자열을 나눌 수 있다 배열로 반환
+
+ 
+
+  substring 문자열에 지정한 범위에 속하는 문자열을 반환한다시작범위에 값은 포함 끝나는 범위에 값은 미포함
+
+ 
+
+  toLowerCase toupperCase 문자열에 대문자를 소문자로 또는 소문자를 대문자로 변환한다
+
+ 
+
+  trim 문자열에 첫 공백과 마지막 공백을 없애준다
+
+ 
+  valueOf 다른 자료형의 변수를 문자열로 변환하기
+
+  compareTo 두 개의 String을 앞에서부터 순서적으로 비교
+
+                문자열의 길이가 다른 경우  길이lengh  길이2length를 반환
+
+                문자열이 다른 부분이 i라면 길이charAti  길이charAti를 반환
+
+ 
+
+   contains 두 개의 String을 비교해서 비교대상 String을 포함하고 있으면 true 다르면 false를 반환
+
+ 
+
+  charAt 지정한 index번째에 문자를 반환
+
+ 
+
+  concat 문자열과 문자열을 결합해준다
+
+ 
+
+  format 서식 문자열을 이용해서 서식화된 문자열을 반환한다 뒤에 인수는 객체 배열이어야 함
+
+ 
+
+  matches 지정한 정규 표현과 일치할 때 true를 반환
+
+ 
+
+  replaceFirst 문자열에 지정한 문자가 있으면 첫번째만 지정한 문자로 바꿔서 출력
+
+ 
+
+" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="/img/logo/logo_opengraph.png" />
+<meta property="og:image:alt" content="blog.imaginaryspace.kr/" />
+<meta property="og:image:width" content="486" />
+<meta property="og:image:height" content="254" />
+<meta property="og:updated_time" content="2021-01-06T23:52:23" />
+<meta property="og:pubdate" content="2021-01-06T23:52:23" />
+<meta property="og:url" content="https://blog.imaginaryspace.kr/" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="java 문자열 함수들😄" />
+<meta name="twitter:site" content="@Imaginary" />
+<meta name="twitter:creator" content="@Imaginary" />
+<meta name="twitter:image" content="/img/logo/logo_opengraph.png">
+<meta name="twitter:description" content=" java 문자열 함수들
+
+java
+        
+  startWith 문자열이 지정한 문자로 시작하는지 판단 같으면 true 아니면 false를 반환 대소문자 구별
+
+ 
+
+  endWith 문자열 마지막에 지정한 문자가 있는지를 판단후 있으면 true 없으면 false를 반환대소문자 구별
+
+ 
+
+  equlas  두 개의 String에 값만을 비교해서 같으면 true 다르면 false대소문자 구별
+
+ 
+
+  indexOf 지정한 문자가 문자열에 몇번째에 있는지를 반환한다 int
+
+ 
+
+   lastindexOf 문자열에 지정한 문자가 마지막 몇 번째에 있는지를 반환한다 int
+
+ 
+
+  length 문자열의 길이를 반환
+
+ 
+
+  replace 문자열에 지정한 문자가 있으면 새로 지정한 문자로 바꿔서 출력
+
+ 
+
+  replaceAll 정규표현식을 지정한 문자로 바꿔서 출력한다
+
+ 
+
+  split  지정한 문자로 문자열을 나눌 수 있다 배열로 반환
+
+ 
+
+  substring 문자열에 지정한 범위에 속하는 문자열을 반환한다시작범위에 값은 포함 끝나는 범위에 값은 미포함
+
+ 
+
+  toLowerCase toupperCase 문자열에 대문자를 소문자로 또는 소문자를 대문자로 변환한다
+
+ 
+
+  trim 문자열에 첫 공백과 마지막 공백을 없애준다
+
+ 
+  valueOf 다른 자료형의 변수를 문자열로 변환하기
+
+  compareTo 두 개의 String을 앞에서부터 순서적으로 비교
+
+                문자열의 길이가 다른 경우  길이lengh  길이2length를 반환
+
+                문자열이 다른 부분이 i라면 길이charAti  길이charAti를 반환
+
+ 
+
+   contains 두 개의 String을 비교해서 비교대상 String을 포함하고 있으면 true 다르면 false를 반환
+
+ 
+
+  charAt 지정한 index번째에 문자를 반환
+
+ 
+
+  concat 문자열과 문자열을 결합해준다
+
+ 
+
+  format 서식 문자열을 이용해서 서식화된 문자열을 반환한다 뒤에 인수는 객체 배열이어야 함
+
+ 
+
+  matches 지정한 정규 표현과 일치할 때 true를 반환
+
+ 
+
+  replaceFirst 문자열에 지정한 문자가 있으면 첫번째만 지정한 문자로 바꿔서 출력
+
+ 
+
+" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="Imaginary" />
+<meta itemprop="name" content="Imaginary" />
+<meta itemprop="description" content=" java 문자열 함수들
+
+java
+        
+  startWith 문자열이 지정한 문자로 시작하는지 판단 같으면 true 아니면 false를 반환 대소문자 구별
+
+ 
+
+  endWith 문자열 마지막에 지정한 문자가 있는지를 판단후 있으면 true 없으면 false를 반환대소문자 구별
+
+ 
+
+  equlas  두 개의 String에 값만을 비교해서 같으면 true 다르면 false대소문자 구별
+
+ 
+
+  indexOf 지정한 문자가 문자열에 몇번째에 있는지를 반환한다 int
+
+ 
+
+   lastindexOf 문자열에 지정한 문자가 마지막 몇 번째에 있는지를 반환한다 int
+
+ 
+
+  length 문자열의 길이를 반환
+
+ 
+
+  replace 문자열에 지정한 문자가 있으면 새로 지정한 문자로 바꿔서 출력
+
+ 
+
+  replaceAll 정규표현식을 지정한 문자로 바꿔서 출력한다
+
+ 
+
+  split  지정한 문자로 문자열을 나눌 수 있다 배열로 반환
+
+ 
+
+  substring 문자열에 지정한 범위에 속하는 문자열을 반환한다시작범위에 값은 포함 끝나는 범위에 값은 미포함
+
+ 
+
+  toLowerCase toupperCase 문자열에 대문자를 소문자로 또는 소문자를 대문자로 변환한다
+
+ 
+
+  trim 문자열에 첫 공백과 마지막 공백을 없애준다
+
+ 
+  valueOf 다른 자료형의 변수를 문자열로 변환하기
+
+  compareTo 두 개의 String을 앞에서부터 순서적으로 비교
+
+                문자열의 길이가 다른 경우  길이lengh  길이2length를 반환
+
+                문자열이 다른 부분이 i라면 길이charAti  길이charAti를 반환
+
+ 
+
+   contains 두 개의 String을 비교해서 비교대상 String을 포함하고 있으면 true 다르면 false를 반환
+
+ 
+
+  charAt 지정한 index번째에 문자를 반환
+
+ 
+
+  concat 문자열과 문자열을 결합해준다
+
+ 
+
+  format 서식 문자열을 이용해서 서식화된 문자열을 반환한다 뒤에 인수는 객체 배열이어야 함
+
+ 
+
+  matches 지정한 정규 표현과 일치할 때 true를 반환
+
+ 
+
+  replaceFirst 문자열에 지정한 문자가 있으면 첫번째만 지정한 문자로 바꿔서 출력
+
+ 
+
+" />
+<meta itemprop="image" content="/img/logo/logo_opengraph.png" />
+
+<title>java 문자열 함수들😄 | Imaginary | ARTICLE DETAIL</title>
+<!-- 폰트어썸 불러오기 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="app.css" />
+<meta name="google-site-verification"
+	content="pIOKCfV5zokT16iQt4AaWGPtvcVm9VWR2Cc5z-zOaRg" />
+<!-- 파비콘 이미지 -->
+<link rel="apple-touch-icon" sizes="57x57"
+	href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- 제이쿼리 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="body-content min-height-100vh flex flex-column">
+		<!-- 로고바 시작 -->
+		<header class="logo-bar con-min-width">
+			<div class="con height-100p flex flex-jc-c">
+				<a href="#" class="logo flex flex-ai-c"> <i
+					class="fab fa-mailchimp"></i> <span> Imagin<span>n</span>ary
+				</span>
+				</a>
+			</div>
+		</header>
+		<!-- 로고바 끝 -->
+
+		<!-- 메뉴바 시작 -->
+		<header class="menu-bar con-min-width">
+			<div class="con height-100p">
+				<nav class="menu-bar__menu-1">
+					<ul class="flex">
+						<li><a href="./" class="block"> <i class="fas fa-home"></i>
+								<span>HOME</span>
+						</a></li>
+						<li><a href="./article_search.html" class="block"> <i
+								class="fas fa-search"></i> <span>검색</span>
+						</a></li>
+						<li><a class="block"> <i class="fas fa-list"></i> <span>ARTICLES</span>
+						</a>
+							<ul><li><a href="article_list_java_1.html" class="block"><i class="fab fa-java"></i> <span>JAVA LIST</span></a></li><li><a href="article_list_free_1.html" class="block"><i class="far fa-edit"></i> <span>FREE LIST</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-volume-up"></i> <span>NOTICE LIST</span></a></li>
+							</ul></li>
+						<li><a class="block"> <i class="fas fa-link"></i> <span>LINK</span>
+						</a>
+							<ul>
+								<li><a href="https://it33.tistory.com/" target="_blank"
+									class="block"> <i class="fab fa-blogger-b"></i> <span>BLOG</span>
+								</a></li>
+								<li><a href="https://github.com/LHG313/" target="_blank"
+									class="block"> <i class="fab fa-github"></i> <span>GITHUB</span>
+								</a></li>
+								<li><a
+									href="https://www.youtube.com/channel/UCQZWSH_dS5NUY0XxtgEA3Ng/"
+									target="_blank" class="block"> <i class="fab fa-youtube"></i>
+										<span>YOUTUBE</span>
+								</a></li>
+							</ul></li>
+						<li><a
+							href="https://analytics.google.com/analytics/web/?hl=ko&pli=1#/p256619008/reports/defaulthome?params=_u..nav%3Ddefault"
+							class="block"> <i class="fas fa-chart-pie"></i> <span>STATISTICS</span>
+						</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- 메뉴바 끝 -->
+
+		<main class="flex-grow-1">
+			<section class="title-bar con-min-width">
+				<h1 class="con"><i class="fas fa-file-alt"></i> <span>ARTICLE DETAIL</span></h1>
+			</section><!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script
+	src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet"
+	href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+	src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+
+<section class="section-1 con-min-width">
+	<div class="con">
+		<div class="article-detail">
+			<h2 class="article-detail__title">java 문자열 함수들😄</h2>
+
+			<div class="article-detail__sub-info flex">
+				<div class="article-detail__board-name">JAVA</div>
+				<div class="article-detail__reg-date">2021-01-06 23:44:51</div>
+				<div class="article-detail__writer">이회구</div>
+				<div class="article-detail__hit-count">조회수 : 0</div>
+				<div class="article-detail__likes-count">추천수 :
+					0</div>
+				<div class="article-detail__comments-count">댓글수 :
+					0</div>
+			</div>
+
+			<div class="article-detail__body main-font"># java 문자열 함수들
+
+```java
+        
+  -startWith: 문자열이 지정한 문자로 시작하는지 판단. 같으면 true 아니면 false를 반환 (대소문자 구별)
+
+ 
+
+  -endWith: 문자열 마지막에 지정한 문자가 있는지를 판단후 있으면 true, 없으면 false를 반환(대소문자 구별)
+
+ 
+
+  -equlas : 두 개의 String에 값만을 비교해서 같으면 true 다르면 false(대소문자 구별)
+
+ 
+
+  -indexOf: 지정한 문자가 문자열에 몇번째에 있는지를 반환한다. (int)
+
+ 
+
+   -lastindexOf: 문자열에 지정한 문자가 마지막 몇 번째에 있는지를 반환한다. (int)
+
+ 
+
+  -length: 문자열의 길이를 반환.
+
+ 
+
+  -replace: 문자열에 지정한 문자가 있으면 새로 지정한 문자로 바꿔서 출력
+
+ 
+
+  -replaceAll: 정규표현식을 지정한 문자로 바꿔서 출력한다.
+
+ 
+
+  -split : 지정한 문자로 문자열을 나눌 수 있다. (배열로 반환)
+
+ 
+
+  -substring: 문자열에 지정한 범위에 속하는 문자열을 반환한다(시작범위에 값은 포함, ★끝나는 범위에 값은 미포함★)
+
+ 
+
+  -toLowerCase, toupperCase: 문자열에 대문자를 소문자로 또는 소문자를 대문자로 변환한다.
+
+ 
+
+  -trim: 문자열에 첫 공백과 마지막 공백을 없애준다.
+
+ 
+  -valueOf: 다른 자료형의 변수를 문자열로 변환하기.
+
+  -compareTo: 두 개의 String을 앞에서부터 순서적으로 비교.
+
+                -문자열의 길이가 다른 경우: ( 길이.lengh - 길이2.length)를 반환
+
+                -문자열이 다른 부분이 i라면 (길이.charAt(i) - 길이.charAt(i))를 반환
+
+ 
+
+   -contains: 두 개의 String을 비교해서 비교대상 String을 포함하고 있으면 true 다르면 false를 반환
+
+ 
+
+  -charAt: 지정한 index번째에 문자를 반환
+
+ 
+
+  -concat: 문자열과 문자열을 결합해준다.
+
+ 
+
+  -format: 서식 문자열을 이용해서 서식화된 문자열을 반환한다. (뒤에 인수는 객체 배열이어야 함)
+
+ 
+
+  -matches: 지정한 정규 표현과 일치할 때 true를 반환
+
+ 
+
+  -replaceFirst: 문자열에 지정한 문자가 있으면 첫번째만 지정한 문자로 바꿔서 출력.
+
+ 
+
+```</div>
+
+			<div class="article-detail__reply-box">
+				<div id="disqus_thread"></div>
+				<script>
+					var disqus_config = function() {
+						this.page.url = 'https://blog.imaginaryspace.kr/article_detail_11.html';
+						this.page.identifier = 'article_detail_11.html';
+					};
+
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://my-smg.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>
+					Please enable JavaScript to view the <a
+						href="https://disqus.com/?ref_noscript">comments powered by
+						Disqus.</a>
+				</noscript>
+
+			</div>
+
+			<div class="article-detail__menu flex">
+				<a title="java 문자열 치환"
+					href="article_detail_7.html"
+					class="hover-underline ">&lt;
+					이전글</a> <a href="article_list_java_1.html"
+					class="hover-underline ">목록</a>
+				<a title=""
+					href="article_detail_0.html"
+					class="hover-underline none">다음글
+					&gt;</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- 위로 가는 버튼 -->
+<div id="top">
+	<a href="#"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script>
+	$('#top').click(function() {
+		$('html, body').animate({
+			scrollTop : 0
+		}, 'slow');
+	});
+</script>
+<!-- // 위로 가는 버튼 -->
+</main>
+
+<footer class="bottom-bar con-min-width">
+	<div class="con flex flex-ai-c">
+		<a href="#" class="logo logo--mini flex flex-ai-c"> <i
+			class="fab fa-mailchimp"></i> <span> Imagi<span>n</span>ary
+		</span>
+		</a>
+
+		<div class="bottom-bar__site-info">
+			developer: LHG <br> email: dd31391@gmail.com
+		</div>
+	</div>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
