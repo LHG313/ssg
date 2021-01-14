@@ -23,7 +23,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://blog.imaginaryspace.kr/" />
-<meta name="subject" content="java 문자열 붙이기"/>
+<meta name="subject" content="비전공자의 공부/일상 블로그"/>
 <meta name="title" content="Imaginary" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="Imaginary" />
@@ -32,33 +32,8 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="Imaginary" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="java 문자열 붙이기" />
-<meta property="og:description" content=" java 문자열 붙이기
-
-java
-        
-         concat을 사용해서 문자열 붙이기
-        String a  안녕
-		String b  하세요
-    
-         ab 안녕  하세요
-		Systemoutprintlnaconcatb
-        
-        출력값 안녕하세요
-
-
-        문자열이 2개 이상일 때는 Concat보다 Append를 사용하기
-		StringBuilder sb  new StringBuilder안녕
-		
-		sbappend하세요
-		sbappend저는 홍길동입니다
-
-		Systemoutprintlnsb
-    
-        출력값 안녕하세요 저는 홍길동입니다
-
-
-" />
+<meta property="og:title" content="비전공자의 공부/일상 블로그" />
+<meta property="og:description" content="비전공자의 공부/일상 관련 글들을 공유합니다." />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="https://blog.imaginaryspace.kr//img/logo/logo_opengraph.png" />
 <meta property="og:image:alt" content="blog.imaginaryspace.kr/" />
@@ -69,68 +44,18 @@ java
 <meta property="og:url" content="https://blog.imaginaryspace.kr/" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="java 문자열 붙이기" />
+<meta name="twitter:title" content="비전공자의 공부/일상 블로그" />
 <meta name="twitter:site" content="@Imaginary" />
 <meta name="twitter:creator" content="@Imaginary" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" java 문자열 붙이기
-
-java
-        
-         concat을 사용해서 문자열 붙이기
-        String a  안녕
-		String b  하세요
-    
-         ab 안녕  하세요
-		Systemoutprintlnaconcatb
-        
-        출력값 안녕하세요
-
-
-        문자열이 2개 이상일 때는 Concat보다 Append를 사용하기
-		StringBuilder sb  new StringBuilder안녕
-		
-		sbappend하세요
-		sbappend저는 홍길동입니다
-
-		Systemoutprintlnsb
-    
-        출력값 안녕하세요 저는 홍길동입니다
-
-
-" />
+<meta name="twitter:description" content="비전공자의 공부/일상 관련 글들을 공유합니다." />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="Imaginary" />
 <meta itemprop="name" content="Imaginary" />
-<meta itemprop="description" content=" java 문자열 붙이기
-
-java
-        
-         concat을 사용해서 문자열 붙이기
-        String a  안녕
-		String b  하세요
-    
-         ab 안녕  하세요
-		Systemoutprintlnaconcatb
-        
-        출력값 안녕하세요
-
-
-        문자열이 2개 이상일 때는 Concat보다 Append를 사용하기
-		StringBuilder sb  new StringBuilder안녕
-		
-		sbappend하세요
-		sbappend저는 홍길동입니다
-
-		Systemoutprintlnsb
-    
-        출력값 안녕하세요 저는 홍길동입니다
-
-
-" />
+<meta itemprop="description" content="비전공자의 공부/일상 관련 글들을 공유합니다." />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
-<title>java 문자열 붙이기 | Imaginary | ARTICLE DETAIL</title>
+<title>Imaginary | ARTICLE LIST JAVA</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -253,104 +178,30 @@ java
 
 		<main class="flex-grow-1">
 			<section class="title-bar con-min-width">
-				<h1 class="con"><i class="fas fa-file-alt"></i> <span>ARTICLE DETAIL</span></h1>
+				<h1 class="con"><i class="fab fa-java"></i> <span>JAVA LIST</span></h1>
 			</section><section class="section-1 con-min-width">
 	<div class="con">
-		<div class="article-detail">
-			<h2 class="article-detail__title">java 문자열 붙이기</h2>
-
-			<div class="article-detail__sub-info flex">
-				<div class="article-detail__board-name">JAVA</div>
-				<div class="article-detail__reg-date">2020-12-21 11:13:07</div>
-				<div class="article-detail__writer">이회구</div>
-				<div class="article-detail__hit-count">조회수 : 5</div>
-				<div class="article-detail__likes-count">추천수 :
-					0</div>
-				<div class="article-detail__comments-count">댓글수 :
-					0</div>
-			</div>
-
-			<script type="text/x-template">
-# java 문자열 붙이기
-
-```java
-        
-        // concat을 사용해서 문자열 붙이기
-        String a = "안녕";
-		String b = "하세요.";
-    
-        // a+b =안녕 + 하세요.
-		System.out.println(a.concat(b));
-        
-        출력값: 안녕하세요.
-
-
-        //문자열이 2개 이상일 때는 Concat보다 Append를 사용하기
-		StringBuilder sb = new StringBuilder("안녕");
-		
-		sb.append("하세요.");
-		sb.append("저는 홍길동입니다.");
-
-		System.out.println(sb);
-    
-        출력값: 안녕하세요. 저는 홍길동입니다.
-
-
-```
-			</script>
-			<div class="article-detail__body main-font toast-ui-viewer"></div>
-			
-			<div class="article-detail__reply-box">
-				<div id="disqus_thread"></div>
-				<script>
-					var disqus_config = function() {
-						this.page.url = 'https://blog.imaginaryspace.kr/article_detail_6.html';
-						this.page.identifier = 'article_detail_6.html';
-					};
-
-					(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = 'https://my-smg.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>
-					Please enable JavaScript to view the <a
-						href="https://disqus.com/?ref_noscript">comments powered by
-						Disqus.</a>
-				</noscript>
-
-			</div>
-
-			<div class="article-detail__menu flex">
-				<a title="java 공백제거"
-					href="article_detail_5.html"
-					class="hover-underline ">&lt;
-					이전글</a> <a href="article_list_java_1.html"
-					class="hover-underline ">목록</a>
-				<a title="java 문자열 치환"
-					href="article_detail_7.html"
-					class="hover-underline ">다음글
-					&gt;</a>
+		<div class="article-list">
+			<header>
+				<div>
+					<div class="article-list__cell-id">번호</div>
+					<div class="article-list__cell-reg-date">날짜</div>
+					<div class="article-list__cell-writer">작성자</div>
+					<div class="article-list__cell-title">제목</div>
+				</div>
+			</header>
+			<div class="main">
+				<div><div class="article-list__cell-id">1</div><div class="article-list__cell-reg-date">2020-12-17 20:55:32</div><div class="article-list__cell-writer">이회구</div><div class="article-list__cell-title"><a href="article_detail_1.html" class="hover-underline">java 문자열에서 부분 추출하기</a></div></div>
 			</div>
 		</div>
-	</div>
-</section>
 
-<!-- 위로 가는 버튼 -->
-<div id="top">
-	<a href="#"><i class="fa fa-arrow-up"></i></a>
-</div>
-<script>
-	$('#top').click(function() {
-		$('html, body').animate({
-			scrollTop : 0
-		}, 'slow');
-	});
-</script>
-<!-- // 위로 가는 버튼 -->
-</main>
+		<div class="article-page-menu">
+			<ul class="flex flex-jc-c">
+				<li><a href="article_list_java_1.html" class="flex flex-ai-c ">1</a></li><li><a href="article_list_java_2.html" class="flex flex-ai-c article-page-menu__link--selected">2</a></li>
+			</ul>
+		</div>
+	</div>
+</section></main>
 
 <footer class="bottom-bar con-min-width">
 	<div class="con flex flex-ai-c">
