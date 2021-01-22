@@ -418,3 +418,9 @@ display : none;
   width:100%;
 }
 /*codepen 끝 */
+
+/*sololearn 적용*/
+.toast-ui-sololearn-plugin-wrap > iframe {
+  width:100%;
+}
+/*sololearn 끝*/

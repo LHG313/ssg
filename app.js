@@ -1,75 +1,100 @@
 function ArticleDetail__Body__init() {
-	if ( toastui === undefined ) {
+	if (toastui === undefined) {
 		return;
 	}
-	
+
 	// 유튜브 플러그인 시작
 	function youtubePlugin() {
-	  toastui.Editor.codeBlockManager.setReplacer('youtube', youtubeId => {
-	    // Indentify multiple code blocks
-	    const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
+		toastui.Editor.codeBlockManager.setReplacer('youtube', youtubeId => {
+			// Indentify multiple code blocks
+			const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
 
-	    // Avoid sanitizing iframe tag
-	    setTimeout(renderYoutube.bind(null, wrapperId, youtubeId), 0);
+			// Avoid sanitizing iframe tag
+			setTimeout(renderYoutube.bind(null, wrapperId, youtubeId), 0);
 
-	    return `<div id="${wrapperId}"></div>`;
-	  });
+			return `<div id="${wrapperId}"></div>`;
+		});
 	}
 
 	function renderYoutube(wrapperId, youtubeId) {
-	  const el = document.querySelector(`#${wrapperId}`);
+		const el = document.querySelector(`#${wrapperId}`);
 
-	  el.innerHTML = `<div class="toast-ui-youtube-plugin-wrap"><iframe src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+		el.innerHTML = `<div class="toast-ui-youtube-plugin-wrap"><iframe src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 	}
 	// 유튜브 플러그인 끝
 
 	// codepen 플러그인 시작
 	function codepenPlugin() {
-	  toastui.Editor.codeBlockManager.setReplacer('codepen', url => {
-	    const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
+		toastui.Editor.codeBlockManager.setReplacer('codepen', url => {
+			const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
 
-	    // Avoid sanitizing iframe tag
-	    setTimeout(renderCodepen.bind(null, wrapperId, url), 0);
+			// Avoid sanitizing iframe tag
+			setTimeout(renderCodepen.bind(null, wrapperId, url), 0);
 
-	    return `<div id="${wrapperId}"></div>`;
-	  });
+			return `<div id="${wrapperId}"></div>`;
+		});
 	}
 
 	function renderCodepen(wrapperId, url) {
-	  const el = document.querySelector(`#${wrapperId}`);
-	  
-	  var urlParams = new URLSearchParams(url.split('?')[1]);
-	  var height = urlParams.get('height');
+		const el = document.querySelector(`#${wrapperId}`);
 
-	  el.innerHTML = `<div class="toast-ui-codepen-plugin-wrap"><iframe height="${height}" scrolling="no" src="${url}" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe></div>`;
+		var urlParams = new URLSearchParams(url.split('?')[1]);
+		var height = urlParams.get('height');
+
+		el.innerHTML = `<div class="toast-ui-codepen-plugin-wrap"><iframe height="${height}" scrolling="no" src="${url}" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe></div>`;
 	}
 	// codepen 플러그인 끝
 
+	// sololearn 플러그인 시작
+	function sololearnPlugin() {
+		toastui.Editor.codeBlockManager.setReplacer('sololearn', url => {
+			const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
+
+			// Avoid sanitizing iframe tag
+			setTimeout(renderSololearn.bind(null, wrapperId, url), 0);
+
+			return `<div id="${wrapperId}"></div>`;
+		});
+	}
+
+	function renderSololearn(wrapperId, url) {
+		const el = document.querySelector(`#${wrapperId}`);
+
+		var urlParams = new URLSearchParams(url.split('?')[1]);
+		var height = urlParams.get('height');
+
+
+
+		el.innerHTML = `<div class="toast-ui-sololearn-plugin-wrap"><iframe  height="${height}" src="${url}"></ifram></div>`;
+	}
+	// sololearn 플러그인 끝
+
+
 	function Editor__init() {
-	  $('.toast-ui-editor').each(function(index, node) {
-	    var initialValue = $(node).prev().html().trim().replace(/t-script/gi, 'script');
-	    
-	    var editor = new toastui.Editor({
-	      el: node,
-	      previewStyle: 'vertical',
-	      initialValue: initialValue,
-	      height:600,
-	      plugins: [toastui.Editor.plugin.codeSyntaxHighlight, youtubePlugin, codepenPlugin]
-	    });
-	  });
+		$('.toast-ui-editor').each(function(index, node) {
+			var initialValue = $(node).prev().html().trim().replace(/t-script/gi, 'script');
+
+			var editor = new toastui.Editor({
+				el: node,
+				previewStyle: 'vertical',
+				initialValue: initialValue,
+				height:  60,
+				plugins: [toastui.Editor.plugin.codeSyntaxHighlight, youtubePlugin, codepenPlugin, sololearnPlugin]
+			});
+		});
 	}
 	Editor__init();
 
 	function EditorViewer__init() {
-	  $('.toast-ui-viewer').each(function(index, node) {
-	    var initialValue = $(node).prev().html().trim().replace(/t-script/gi, 'script');
-	    var viewer = new toastui.Editor.factory({
-	      el: node,
-	      initialValue: initialValue,
-	      viewer:true,
-	      plugins: [toastui.Editor.plugin.codeSyntaxHighlight, youtubePlugin, codepenPlugin]
-	    });
-	  });
+		$('.toast-ui-viewer').each(function(index, node) {
+			var initialValue = $(node).prev().html().trim().replace(/t-script/gi, 'script');
+			var viewer = new toastui.Editor.factory({
+				el: node,
+				initialValue: initialValue,
+				viewer: true,
+				plugins: [toastui.Editor.plugin.codeSyntaxHighlight, youtubePlugin, codepenPlugin, sololearnPlugin]
+			});
+		});
 	}
 	EditorViewer__init();
 }
