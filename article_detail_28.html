@@ -23,7 +23,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://blog.imaginaryspace.kr/" />
-<meta name="subject" content="c 언어 stack문제"/>
+<meta name="subject" content="phython 기사실기 연습문제1"/>
 <meta name="title" content="Imaginary" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="Imaginary" />
@@ -32,63 +32,24 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="Imaginary" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="c 언어 stack문제" />
-<meta property="og:description" content=" C언어 18년 기사 실기 기출문제 stack
+<meta property="og:title" content="phython 기사실기 연습문제1" />
+<meta property="og:description" content=" python 기사 실기 기출문제
 
 sololearn 
-httpscodesololearncomca19A719a7a2height800
+httpscodesololearncomc3A71a2A230aheight500
 
 html
 문제에 대한 해석
 
-   1define 반복되는 명령이나 수식을 프로그래머가 별도의 이름을 부여하여 치환
-    매크로 정의라고도 합니다
-    MAXSTACKSIZE를 10으로 정의
-    매크로명은 변수명 만드는 규칙과 동일하나 일반 변수와 구별하기 위하여 대문자로 사용하는 것이 관례
-    보기에는 변수 선언과 비슷해 보이지만 define은 함수 개념이 들어갈 수 있다는 점의 차이점이 있습니다
-    문장과는 달리 마지막에 세미클론을 사용하지 않습니다define MAXSTACKSIZE 10
+data1 data2 7 문자형
+data3 data4  77 14 정수형
+int  정수형으로 변환 
+str  문자형으로 변환
 
- push
-    3정수형 item 20을 입력 받아 처리  stack020
-       vod 리턴 값이 없다  top 1 증가 후 사용
-       stack130 stack240
-
- pop
-    11top 2  return stack2  40 return
-        top 사용 후 1 감소
-    16top1  return stack1  30 return
-    21top0  return stack0  20 return
-    9top2  return 0
-    14top1  return 0
-    19top0  return 0
-    24top1  return 1
-
-  main에서 시작
-    2push 함수로 인수 20을 전달
-    4push 함수로 인수 30을 전달
-    6push 함수로 인수 40을 전달
-    8isempty 함수 호출  return 0
-    10isempty가 참이므로 반복 수행  pop 함수 호출
-
-    12출력 40
-    13isempty 함수 호출  return 0
-    15isempty가 참이므로 반복 수행  pop 함수 호출
-
-    17출력 30
-    18isempty 함수 호출  return 0
-    20isempty가 참이므로 반복 수행  pop 함수 호출
-
-    22출력 20
-    23isempty 함수 호출  return 1
-    25isempty가 거짓이므로 main 종료
-
-    
-    빈칸 
-    1번 답 MAXSTACKSIZE 1 또는 9  define MAXSTACKSIZE 가 10이므로 
-    2번 답 item
-    3번 답 1
-    4번 답 top
-
+답안  77
+      14  
+      14  
+      77  
 
 " />
 <meta property="og:locale" content="ko_KR" />
@@ -101,132 +62,54 @@ html
 <meta property="og:url" content="https://blog.imaginaryspace.kr/" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="c 언어 stack문제" />
+<meta name="twitter:title" content="phython 기사실기 연습문제1" />
 <meta name="twitter:site" content="@Imaginary" />
 <meta name="twitter:creator" content="@Imaginary" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" C언어 18년 기사 실기 기출문제 stack
+<meta name="twitter:description" content=" python 기사 실기 기출문제
 
 sololearn 
-httpscodesololearncomca19A719a7a2height800
+httpscodesololearncomc3A71a2A230aheight500
 
 html
 문제에 대한 해석
 
-   1define 반복되는 명령이나 수식을 프로그래머가 별도의 이름을 부여하여 치환
-    매크로 정의라고도 합니다
-    MAXSTACKSIZE를 10으로 정의
-    매크로명은 변수명 만드는 규칙과 동일하나 일반 변수와 구별하기 위하여 대문자로 사용하는 것이 관례
-    보기에는 변수 선언과 비슷해 보이지만 define은 함수 개념이 들어갈 수 있다는 점의 차이점이 있습니다
-    문장과는 달리 마지막에 세미클론을 사용하지 않습니다define MAXSTACKSIZE 10
+data1 data2 7 문자형
+data3 data4  77 14 정수형
+int  정수형으로 변환 
+str  문자형으로 변환
 
- push
-    3정수형 item 20을 입력 받아 처리  stack020
-       vod 리턴 값이 없다  top 1 증가 후 사용
-       stack130 stack240
-
- pop
-    11top 2  return stack2  40 return
-        top 사용 후 1 감소
-    16top1  return stack1  30 return
-    21top0  return stack0  20 return
-    9top2  return 0
-    14top1  return 0
-    19top0  return 0
-    24top1  return 1
-
-  main에서 시작
-    2push 함수로 인수 20을 전달
-    4push 함수로 인수 30을 전달
-    6push 함수로 인수 40을 전달
-    8isempty 함수 호출  return 0
-    10isempty가 참이므로 반복 수행  pop 함수 호출
-
-    12출력 40
-    13isempty 함수 호출  return 0
-    15isempty가 참이므로 반복 수행  pop 함수 호출
-
-    17출력 30
-    18isempty 함수 호출  return 0
-    20isempty가 참이므로 반복 수행  pop 함수 호출
-
-    22출력 20
-    23isempty 함수 호출  return 1
-    25isempty가 거짓이므로 main 종료
-
-    
-    빈칸 
-    1번 답 MAXSTACKSIZE 1 또는 9  define MAXSTACKSIZE 가 10이므로 
-    2번 답 item
-    3번 답 1
-    4번 답 top
-
+답안  77
+      14  
+      14  
+      77  
 
 " />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="Imaginary" />
 <meta itemprop="name" content="Imaginary" />
-<meta itemprop="description" content=" C언어 18년 기사 실기 기출문제 stack
+<meta itemprop="description" content=" python 기사 실기 기출문제
 
 sololearn 
-httpscodesololearncomca19A719a7a2height800
+httpscodesololearncomc3A71a2A230aheight500
 
 html
 문제에 대한 해석
 
-   1define 반복되는 명령이나 수식을 프로그래머가 별도의 이름을 부여하여 치환
-    매크로 정의라고도 합니다
-    MAXSTACKSIZE를 10으로 정의
-    매크로명은 변수명 만드는 규칙과 동일하나 일반 변수와 구별하기 위하여 대문자로 사용하는 것이 관례
-    보기에는 변수 선언과 비슷해 보이지만 define은 함수 개념이 들어갈 수 있다는 점의 차이점이 있습니다
-    문장과는 달리 마지막에 세미클론을 사용하지 않습니다define MAXSTACKSIZE 10
+data1 data2 7 문자형
+data3 data4  77 14 정수형
+int  정수형으로 변환 
+str  문자형으로 변환
 
- push
-    3정수형 item 20을 입력 받아 처리  stack020
-       vod 리턴 값이 없다  top 1 증가 후 사용
-       stack130 stack240
-
- pop
-    11top 2  return stack2  40 return
-        top 사용 후 1 감소
-    16top1  return stack1  30 return
-    21top0  return stack0  20 return
-    9top2  return 0
-    14top1  return 0
-    19top0  return 0
-    24top1  return 1
-
-  main에서 시작
-    2push 함수로 인수 20을 전달
-    4push 함수로 인수 30을 전달
-    6push 함수로 인수 40을 전달
-    8isempty 함수 호출  return 0
-    10isempty가 참이므로 반복 수행  pop 함수 호출
-
-    12출력 40
-    13isempty 함수 호출  return 0
-    15isempty가 참이므로 반복 수행  pop 함수 호출
-
-    17출력 30
-    18isempty 함수 호출  return 0
-    20isempty가 참이므로 반복 수행  pop 함수 호출
-
-    22출력 20
-    23isempty 함수 호출  return 1
-    25isempty가 거짓이므로 main 종료
-
-    
-    빈칸 
-    1번 답 MAXSTACKSIZE 1 또는 9  define MAXSTACKSIZE 가 10이므로 
-    2번 답 item
-    3번 답 1
-    4번 답 top
-
+답안  77
+      14  
+      14  
+      77  
 
 " />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
-<title>c 언어 stack문제 | Imaginary | ARTICLE DETAIL</title>
+<title>phython 기사실기 연습문제1 | Imaginary | ARTICLE DETAIL</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -353,13 +236,13 @@ html
 			</section><section class="section-1 con-min-width">
 	<div class="con">
 		<div class="article-detail">
-			<h2 class="article-detail__title">c 언어 stack문제</h2>
+			<h2 class="article-detail__title">phython 기사실기 연습문제1</h2>
 
 			<div class="article-detail__sub-info flex">
-				<div class="article-detail__board-name">c언어</div>
-				<div class="article-detail__reg-date">2021-01-26 21:25:51</div>
+				<div class="article-detail__board-name">파이썬</div>
+				<div class="article-detail__reg-date">2021-02-09 23:43:00</div>
 				<div class="article-detail__writer">이회구</div>
-				<div class="article-detail__hit-count">조회수 : 1</div>
+				<div class="article-detail__hit-count">조회수 : 0</div>
 				<div class="article-detail__likes-count">추천수 :
 					0</div>
 				<div class="article-detail__comments-count">댓글수 :
@@ -367,62 +250,23 @@ html
 			</div>
 
 			<script type="text/x-template">
-# C언어 18년 기사 실기 기출문제 -stack
+# python 기사 실기 기출문제
 
 ```sololearn 
-https://code.sololearn.com/ca19A719a7a2/#?height=800
+https://code.sololearn.com/c3A71a2A230a?height=500
 ```
 ```html
 <--!문제에 대한 해석-->
 
-   1)#define: 반복되는 명령이나 수식을 프로그래머가 별도의 이름을 부여하여 치환
-    (매크로 정의라고도 합니다.)
-    -MAX_STACK_SIZE를 10으로 정의
-    -매크로명은 변수명 만드는 규칙과 동일하나 일반 변수와 구별하기 위하여 대문자로 사용하는 것이 관례
-    (보기에는 변수 선언과 비슷해 보이지만, #define은 함수 개념이 들어갈 수 있다는 점의 차이점이 있습니다.)
-    -문장과는 달리 마지막에 세미클론(;)을 사용하지 않습니다.(#define MAX_STACK_SIZE 10)
+data1, data2: '7'= 문자형
+data3, data4 = 7+7 =14 정수형
+(int) <-- 정수형으로 변환 
+(str) <-- 문자형으로 변환
 
- *push()
-    3)정수형 item 20을 입력 받아 처리 -> stack[0]=20
-       -vod: 리턴 값이 없다. - ++top: 1 증가 후 사용
-       -stack[1]=30 -stack[2]=40
-
- *pop()
-    11)top= 2 -> return stack[2] -> 40 return
-       - top--: 사용 후 1 감소
-    16)top=1 -> return stack[1] -> 30 return
-    21)top=0 -> return stack[0] -> 20 return
-    9)top=2 -> return 0
-    14)top=1 -> return 0
-    19)top=0 -> return 0
-    24)top=-1 -> return 1
-
-  *main()에서 시작
-    2)push 함수로 인수 20을 전달
-    4)push 함수로 인수 30을 전달
-    6)push 함수로 인수 40을 전달
-    8)isempty 함수 호출 -> return 0
-    10)!isempty가 참이므로 반복 수행 -> pop 함수 호출
-
-    12)출력 40
-    13)isempty 함수 호출 -> return 0
-    15)!isempty가 참이므로 반복 수행 -> pop 함수 호출
-
-    17)출력 30
-    18)isempty 함수 호출 -> return 0
-    20)!isempty가 참이므로 반복 수행 -> pop 함수 호출
-
-    22)출력 20
-    23)isempty 함수 호출 -> return 1
-    25)!isempty가 거짓이므로 main() 종료
-
-    
-    빈칸 
-    1번 답: MAX_STACK_SIZE -1 또는 9 => #define MAX_STACK_SIZE 가 10이므로 
-    2번 답: item
-    3번 답: -1
-    4번 답: top--
-
+답안:  77
+      14  
+      14  
+      77  
 
 ```
 			</script>
@@ -432,8 +276,8 @@ https://code.sololearn.com/ca19A719a7a2/#?height=800
 				<div id="disqus_thread"></div>
 				<script>
 					var disqus_config = function() {
-						this.page.url = 'https://blog.imaginaryspace.kr/article_detail_24.html';
-						this.page.identifier = 'article_detail_24.html';
+						this.page.url = 'https://blog.imaginaryspace.kr/article_detail_28.html';
+						this.page.identifier = 'article_detail_28.html';
 					};
 
 					(function() { // DON'T EDIT BELOW THIS LINE
@@ -452,13 +296,13 @@ https://code.sololearn.com/ca19A719a7a2/#?height=800
 			</div>
 
 			<div class="article-detail__menu flex">
-				<a title="c 언어 역순 출력 문제"
-					href="article_detail_23.html"
-					class="hover-underline ">&lt;
-					이전글</a> <a href="article_list_c_1.html"
+				<a title=""
+					href="article_detail_0.html"
+					class="hover-underline none">&lt;
+					이전글</a> <a href="article_list_phython_1.html"
 					class="hover-underline ">목록</a>
-				<a title="c 언어 재귀함수 문제"
-					href="article_detail_25.html"
+				<a title="phython 기사실기 연습문제2"
+					href="article_detail_29.html"
 					class="hover-underline ">다음글
 					&gt;</a>
 			</div>
